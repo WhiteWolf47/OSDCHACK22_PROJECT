@@ -1,3 +1,4 @@
+from ctypes import resize
 import shutil
 import matplotlib.pyplot as plt
 import numpy as np
@@ -34,7 +35,7 @@ def split_data(path_to_data, path_to_save_train, path_to_save_val, split_size=0.
     for folder in folders:
 
         full_path = os.path.join(path_to_data, folder)
-        images_paths = glob.glob(os.path.join(full_path, '*.png'))
+        images_paths = glob.glob(os.path.join(full_path, '*.jpg'))
 
         x_train, x_val = train_test_split(images_paths, test_size=split_size)
 
@@ -86,7 +87,7 @@ def order_test_set(path_to_images, path_to_csv):
 def create_generators(batch_size, train_data_path, val_data_path, test_data_path):
 
     train_preprocessor = ImageDataGenerator(
-        rescale = 1 / 255.,
+        featurewise_std_normalization=True, horizontal_flip=True, rescale = 1 / 255.,
         rotation_range=10,
         width_shift_range=0.1
     )

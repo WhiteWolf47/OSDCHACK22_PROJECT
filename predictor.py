@@ -20,10 +20,10 @@ def predict_with_model(model, imgpath):
 
 if __name__=="__main__":
 
-    img_path = "D:\\Datasets\\GTSRB\\raw_downloaded_dataset\\GTSRB-GermanTrafficSignRecognitionBenchmark\\Test\\2\\00409.png"
-    img_path = "D:\\Datasets\\GTSRB\\raw_downloaded_dataset\\GTSRB-GermanTrafficSignRecognitionBenchmark\\Test\\0\\00807.png"
+    img_path = r"C:\Users\anura\Desktop\hcthn_prjct\simpsons\kaggle_simpson_testset\kaggle_simpson_testset\comic_book_guy_15.jpg"
+    #img_path = r"C:\Users\anura\Desktop\hcthn_prjct\simpsons\kaggle_simpson_testset\kaggle_simpson_testset\bart_simpson_48.jpg"
 
-    model = tf.keras.models.load_model('./Models')
+    model = tf.keras.models.load_model('./Models_simp1')
     prediction = predict_with_model(model, img_path)
 
     print(f"prediction = {prediction}")
