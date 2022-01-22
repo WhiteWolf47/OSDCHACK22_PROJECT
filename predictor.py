@@ -21,7 +21,7 @@ def predict_with_model(model, imgpath):
 if __name__=="__main__":
 
     img_path = r"C:\Users\anura\Desktop\hcthn_prjct\simpsons\kaggle_simpson_testset\kaggle_simpson_testset\comic_book_guy_15.jpg"
-    #img_path = r"C:\Users\anura\Desktop\hcthn_prjct\simpsons\kaggle_simpson_testset\kaggle_simpson_testset\bart_simpson_48.jpg"
+    
 
     model = tf.keras.models.load_model('./Models_simp1')
     prediction = predict_with_model(model, img_path)
