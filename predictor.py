@@ -23,7 +23,7 @@ if __name__=="__main__":
     img_path = r"C:\Users\anura\Desktop\hcthn_prjct\simpsons\kaggle_simpson_testset\kaggle_simpson_testset\comic_book_guy_15.jpg"
     
 
-    model = tf.keras.models.load_model('./Models_simp1')
+    model = tf.keras.models.load_model('./Models_simp2')
     prediction = predict_with_model(model, img_path)
 
     print(f"prediction = {prediction}")
