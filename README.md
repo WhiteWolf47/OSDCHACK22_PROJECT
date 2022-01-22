@@ -1,1 +1,1 @@
-OSDCHACK22 project by anurag and rushil
+Simpsons' character image calssification/identification Deep Learning Model.
