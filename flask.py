@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 from predictor import predict_with_model()
 from names import get_names()
-from PIL import Image
+
 
 app = Flask(__name__)
 
@@ -24,8 +24,7 @@ def home():
     path_to_names = r"./test_images"
     names = get_names(path_to_names)
     print(f"Character's Name : {names[prediction]}
-    im = Image.open(img_path)
-    im.show()
+    
 	
     #pred = model.predict(arr)
     return render_template('after.html', data=pred)
